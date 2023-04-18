@@ -3,6 +3,7 @@
 В проекте реализован функционал задания маршрута, задания информации об остановках, вывод информации о длине маршрута, количестве остановок и прочей информации. 
 
 Пример запроса на ввод:
+
 13
 Stop Tolstopaltsevo: 55.611087, 37.20829, 3900m to Marushkino
 Stop Marushkino: 55.595884, 37.209755, 9900m to Rasskazovka, 100m to Marushkino
@@ -27,6 +28,7 @@ Stop Biryulyovo Zapadnoye
 
 
 Пример вывода:
+
 Bus 256: 6 stops on route, 5 unique stops, 5950 route length, 1.36124 curvature
 Bus 750: 7 stops on route, 3 unique stops, 27400 route length, 1.30853 curvature
 Bus 751: not found
