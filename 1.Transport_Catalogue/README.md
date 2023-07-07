@@ -28,6 +28,6 @@
 файл : input_out.txt.txt
 
 ### Вывод: ###
-файл : input_answer.txt.txt
+файл : answer_out.txt.txt
   
   
