@@ -1,0 +1,130 @@
+version: '3.9'
+
+volumes:
+  redis_data:
+  postgres_data:
+  postgres_streaming_data:
+  movies_streaming_data:
+  elasticsearch_data:
+  airflow_scheduler_data:
+  airflow_worker_data:
+  airflow_logs_data:
+  airflow_data:
+
+services:
+  movies_admin:
+    build:
+      context: ./services/movies_admin/
+    container_name: movies_admin
+    restart: on-failure
+    depends_on:
+      - postgres
+  movies_streaming_admin:
+    build:
+      context: ./services/movies_streaming_admin/
+    container_name: movies_streaming_admin
+    restart: on-failure
+    depends_on:
+      - postgres_streaming
+  movies_streaming_converter_api:
+    build:
+      context: ./services/movies_streaming_converter/
+    container_name: movies_streaming_converter_api
+    restart: on-failure
+    depends_on:
+      - postgres_streaming
+  movies_film_etl:
+    build:
+      context: ./services/movies_etl/
+    container_name: movies_film_etl
+    restart: on-failure
+    environment:
+      - ETL_MODE=film_work
+    depends_on:
+      - postgres
+      - elasticsearch
+  movies_person_etl:
+    build:
+      context: ./services/movies_etl/
+    container_name: movies_person_etl
+    restart: on-failure
+    environment:
+      - ETL_MODE=person
+    depends_on:
+      - postgres
+      - elasticsearch
+  movies_genre_etl:
+    build:
+      context: ./services/movies_etl/
+    container_name: movies_genre_etl
+    restart: on-failure
+    environment:
+      - ETL_MODE=genre
+    depends_on:
+      - postgres
+      - elasticsearch
+  movies_async_api:
+    build:
+      context: ./services/movies_async_api/
+    container_name: movies_async_api
+    restart: on-failure
+    depends_on:
+      - redis
+      - postgres
+      - elasticsearch
+  elasticsearch:
+    image: elasticsearch:7.5.0
+    container_name: elasticsearch
+    restart: always
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    environment:
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - discovery.type=single-node
+      - logger.level=INFO
+  postgres:
+    image: postgres:13.0-alpine
+    container_name: postgres
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+      - ./services/movies_admin/entrypoint.initdb.sh:/docker-entrypoint-initdb.d/entrypoint-initdb.sh
+  postgres_streaming:
+    image: postgres:13.0-alpine
+    container_name: postgres_streaming
+    restart: always
+    volumes:
+      - postgres_streaming_data:/var/lib/postgresql/data/
+      - ./services/movies_streaming_admin/entrypoint.initdb.sh:/docker-entrypoint-initdb.d/entrypoint-initdb.sh
+  redis:
+    image: redis:6.2.6-alpine
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_data:/data
+  airflow_scheduler:
+    image: docker.io/bitnami/airflow-scheduler:2
+    container_name: airflow_scheduler
+    restart: always
+    volumes:
+      - airflow_scheduler_data:/bitnami
+      - ./services/movies_streaming_etl/airflow/dags:/opt/bitnami/airflow/dags
+      - ./services/movies_streaming_etl/airflow/requirements.txt:/bitnami/python/requirements.txt
+  airflow_worker:
+    image: docker.io/bitnami/airflow-worker:2
+    container_name: airflow_worker
+    restart: always
+    volumes:
+      - airflow_worker_data:/bitnami
+      - airflow_logs_data:/opt/bitnami/airflow/logs
+      - ./services/movies_streaming_etl/airflow/dags:/opt/bitnami/airflow/dags
+      - ./services/movies_streaming_etl/airflow/requirements.txt:/bitnami/python/requirements.txt
+  airflow:
+    image: docker.io/bitnami/airflow:2
+    container_name: airflow
+    restart: always
+    volumes:
+      - airflow_data:/bitnami
+      - airflow_logs_data:/opt/bitnami/airflow/logs
+      - ./services/movies_streaming_etl/airflow/dags:/opt/bitnami/airflow/dags
+      - ./services/movies_streaming_etl/airflow/requirements.txt:/bitnami/python/requirements.txt
