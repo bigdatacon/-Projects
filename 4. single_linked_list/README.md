@@ -1,4 +1,10 @@
-# cpp-single-linked-list
-Финальный проект: односвязный список
+# Final Project: Singly Linked List
 
-Реализован однонаправленный односвязанный список, итераторы, деструктор, конструкторы копирования и присваивания,  оператор сравнения, инкремент, методы доступа к элементам списка.
+The project implements a singly linked list with the following functionalities:
+
+- Iterators
+- Destructor
+- Copy constructors and assignment operators
+- Comparison operator
+- Increment operator
+- Methods for accessing list elements
