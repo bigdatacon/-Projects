@@ -1,15 +1,21 @@
-In this repository, the corresponding folder contains C++ projects with detailed descriptions in the respective project's readme:
+# Repository Overview
 
-Table - Diploma project for the C++ Developer course at Yandex.
-Transport_Catalogue - Final project for the C++ Developer course at Yandex.
-Search_server - Major final project (spanning multiple sprints) for the C++ Developer course at Yandex.
-Simple_vector - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
-single_linked_list - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+This repository contains several C++ and Python projects with detailed descriptions in their respective project readmes.
+
+## C++ Projects
+
+1. **Table** - Diploma project for the C++ Developer course at Yandex.
+2. **Transport_Catalogue** - Final project for the C++ Developer course at Yandex.
+3. **Search_server** - Major final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+4. **Simple_vector** - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+5. **single_linked_list** - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+
 In total, more than 100 multi-file assignments were completed during the course, with the main ones listed here.
 
-Python Projects:
-5. Airflor_Django_Cinema_python - Final project for the Middle Python Developer course at Yandex.
-6. Voleyball_bet_3_set_py - One of the personal projects I worked on, not part of the coursework.
-7. PROJECT_MAP_ITOG_py - Final project for the GEEK BRAINS course.
+## Python Projects
+
+6. **Airflor_Django_Cinema_python** - Final project for the Middle Python Developer course at Yandex.
+7. **Voleyball_bet_3_set_py** - One of the personal projects I worked on, not part of the coursework.
+8. **PROJECT_MAP_ITOG_py** - Final project for the GEEK BRAINS course.
 
 In total, several dozen assignments were completed in Python, with the main ones listed here.
