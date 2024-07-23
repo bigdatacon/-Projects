@@ -1,8 +1,9 @@
 # cpp-spreadsheet
-Дипломный проект: Электронная таблица
+Diploma Project: Spreadsheet
 
-Реализован упрощенный аналог листа Excel :
-- создание ячейки
-- добавление содержимого в ячейку, в том числе текста/ чисел/ формул /пустых ячеек
-- вычисление значения ячеек, в том числе сложных формул, имеющих ссылки на другие ячейки
-- проверка на циклическую ссылку при добавлении ячеки 
+An simplified analog of an Excel sheet was implemented:
+
+Creating a cell
+Adding content to a cell, including text/numbers/formulas/empty cells
+Calculating the value of cells, including complex formulas with references to other cells
+Checking for cyclic references when adding a cell
