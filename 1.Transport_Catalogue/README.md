@@ -1,34 +1,29 @@
 # cpp-transport-catalogue
-# Финальный проект: транспортный справочник 
+Final Project: Transport Directory
 
-## Проект представляет собой базу данных с маршрутами автобусов, для которых предоставлена информация о: ##
-- названиях маршрутов
-- названиях остановок
-- типе маршрута (кольцевой / не кольцевой)
-- расстояниии по дороге
-- координатах остановок (расчета географического расстояния)
-- скорости движения автобусов
-- времени ожидания автобусов
+The project is a database with bus routes, which provides information on:
 
-Данные на ввод поступают в cin. Далее заполняется база и сериализуется. 
-Данные на "вывод - то есть информация по запросу к базе" - также поступает в cin, при этом файл базы десириализуется и из базы идет чтение данных.
-Сборка через CMAKE. 
-Применена асинхронность.
+Route names
+Stop names
+Type of route (circular/non-circular)
+Road distance
+Stop coordinates (for calculating geographical distance)
+Bus speeds
+Bus waiting times
+Input data is received through cin. The database is then populated and serialized. The "output" data (i.e., information from queries to the database) is also received through cin, where the database file is deserialized and data is read from the database. The project is built using CMake. Asynchronous processing is applied.
 
-## Реализовано получание следующей информации: ##
-- данных об остановках / длине, типе для конкретного маршрута
-- данных о проходящих через остановку автобусах
-- отрисовка карты маршрута
-- построениие оптимального маршрутам от остановки A до B с учетом пересадок и ожиданий
+Implemented functionalities include:
 
-### Пример запроса на заполнение базы: ###
-файл : input_in.txt.txt
+Retrieving information about stops/length/type for specific routes
+Retrieving information about buses passing through a stop
+Drawing the route map
+Building the optimal route from stop A to B, considering transfers and waiting times
+Example of a request to populate the database:
+File: input_in.txt
 
+Example of a data output request:
+File: input_out.txt
 
-### Пример запроса на ВЫВОД данных: ###
-файл : input_out.txt.txt
-
-### Вывод: ###
-файл : answer_out.txt.txt
-  
+Output:
+File: answer_out.txt
   
