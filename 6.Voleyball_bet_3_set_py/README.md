@@ -1,25 +1,26 @@
 # voley_bet_3_set
 parsing/predict_model/autobet
 
-#название файлов рабочее, так как делал все для себя, особой красоты не наводил 
+## File names are working titles as the project was done for personal use, so there might be a lack of polish.
 
+### 1. The program consists of 3 modules:
 
-#1.Программа состоит из 3 блоков: 
-- парсинг: парсит игры в лайве с сайтов букмекеров 
-- прогнозотор(делает предикт на какую команду ставить) - на основе ранее подготовленной модели (модель на базе тестового датасета на основе рельных игр в количестве 8000 штук)
-- автоставка: делает ставку на тот исход, который выдал прогнозатор
-- Все в сборе запускается в следующей очередности: 
-1) парсер
-2) прогнозатор
-3) автоставка 
-Все файлы находятся в папке voley_set. Тренировочная модель в корне проекта 
-В папке voley_set/test_model_result  - находятся файлы которые проверяют результат работы модели на рельных данных.
+- **Parsing**: Parses live games from bookmaker websites.
+- **Predictor**: Makes a prediction on which team to bet on based on a pre-trained model (the model is based on a test dataset of 8000 real games).
+- **Autobet**: Places a bet on the outcome predicted by the predictor.
 
-#2. Чтобы запустить парсер нужно запустить файл sound1508.py
+### The full process is executed in the following order:
 
-#3 Чтобы запустить прогнозотор нужно запустить файл to_bet.py
+1. Parser
+2. Predictor
+3. Autobet
 
-#4. Чтобы запустить автоставку нужно запустить файл 3_7
+All files are located in the `voley_set` folder. The training model is in the root of the project. In the `voley_set/test_model_result` folder, there are files that test the model's performance on real data.
 
-№5. Чтобы проверить результат работы прогнозатора нужно запустить файлы из voley_set/test_model_result в порядке нумерации в начале названия файла. Данный блок не обязательный, сделан чтобы можно было проверить результат оперативно
+### 2. To run the parser, execute the file `sound1508.py`.
 
+### 3. To run the predictor, execute the file `to_bet.py`.
+
+### 4. To run the autobet, execute the file `3_7`.
+
+### 5. To check the predictor's performance, run the files in the `voley_set/test_model_result` folder in the order of their numerical prefixes. This step is optional and is provided to allow quick verification of the results.
