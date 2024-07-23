@@ -1,8 +1,7 @@
 ![flake8](https://github.com/fuodorov/graduate_work/actions/workflows/flake8.yml/badge.svg)
-Это описание финального проекта яндекс практикума (курс мидл питон разработчик). Фнальный проект выполнялся в группе. 
+This is the description of the final project for the Yandex Practicum (Middle Python Developer course). The final project was completed in a group.
 
-Также я добавил свою упрощенную реализацию финального проекта в которой реализован текстовый поиск в базе с использование ЯНДЕКС АЛИСЫ. 
-Описание моей реализации 
+Additionally, I have added my simplified implementation of the final project, which includes text search in the database using Yandex Alice. Description of my implementation can be found in `README_MY`.
 see [README_MY](https://github.com/bigdatacon/-Projects/blob/main/5.Airflor_Django_Cinema_python/graduate_work_yand-main/README_MY.md).
 
 # Online Movies
