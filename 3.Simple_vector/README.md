@@ -1,3 +1,10 @@
-# cpp-simple-vector
-Финальный проект: собственный контейнер вектор
-Реализован класс simple-vector , в котором реализован конструктор копирования, получения элемента, итераторы, создания вектора из initializer_list и заданного перечня элементов, вставки в произвольное место вектора и прочий функционал.
+# Final Project: Custom Vector Container
+
+The project implements the `simple-vector` class, which includes the following functionalities:
+
+- Copy constructor
+- Element access
+- Iterators
+- Creation of a vector from an `initializer_list` and a specified list of elements
+- Insertion at an arbitrary position in the vector
+- Other functionalities
