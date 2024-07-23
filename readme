@@ -1,16 +1,15 @@
-В данном репо в соответствующей папке находятся проекты С++, подробное описание в readme соответствующего проекта:
+In this repository, the corresponding folder contains C++ projects with detailed descriptions in the respective project's readme:
 
-0.Table - Диплоный проект курса С++ разработчик Яндекса.
-1.Transport_Catalogue - финальный проект курса С++ разработчик Яндекса. 
-2.Search_server - большой итоговый(для нескольких спринтов) проект с курса Яндекса
-3.Simple_vector - итоговый(для нескольких спринтов) проект с курса Яндекса
-4. single_linked_list - итоговый(для нескольких спринтов) проект с курса Яндекса
+Table - Diploma project for the C++ Developer course at Yandex.
+Transport_Catalogue - Final project for the C++ Developer course at Yandex.
+Search_server - Major final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+Simple_vector - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+single_linked_list - Final project (spanning multiple sprints) for the C++ Developer course at Yandex.
+In total, more than 100 multi-file assignments were completed during the course, with the main ones listed here.
 
-Всего на курсе было решено >100 многофайловых заданий, указал основные.
+Python Projects:
+5. Airflor_Django_Cinema_python - Final project for the Middle Python Developer course at Yandex.
+6. Voleyball_bet_3_set_py - One of the personal projects I worked on, not part of the coursework.
+7. PROJECT_MAP_ITOG_py - Final project for the GEEK BRAINS course.
 
- Проекты Python:
-5.Airflor_Django_Cinema_python - финальный проект курса Middle Python разработчик Яндекса. 
-6.Voleyball_bet_3_set_py - один из проектов которые я делал для себя, не в рамках обучения
-7.PROJECT_MAP_ITOG_py - финальный проект с курса GEEK BRAINS 
-
-Всего по питон было реализовано несколько десятков заданий, указал основные
+In total, several dozen assignments were completed in Python, with the main ones listed here.
