@@ -1,15 +1,15 @@
 # cpp-search-server
-Финальный проект: поисковый сервер
+# Final Project: Search Server
 
-Реализован функционал поиска запросов в поисковике, с выводом наиболее подходящего запроса и его релевантности.
-Пример запросов на ввод:
+The project implements the functionality of processing search queries in a search engine, displaying the most relevant results and their relevance. Example input queries:
+
 
             "white cat and yellow hat"s,
             "curly cat curly tail"s,
             "nasty dog with big eyes"s,
             "nasty pigeon john"s,
             
-Вывод:
+Output:
 
 ACTUAL by default:
 { document_id = 2, relevance = 0.866434, rating = 1 }
