@@ -3,7 +3,7 @@
 
 Также я добавил свою упрощенную реализацию финального проекта в которой реализован текстовый поиск в базе с использование ЯНДЕКС АЛИСЫ. 
 Описание моей реализации 
-[README_MY](README_MY)
+see [README_MY](https://github.com/bigdatacon/-Projects/blob/main/5.Airflor_Django_Cinema_python/graduate_work_yand-main/README_MY.md).
 
 # Online Movies
 
